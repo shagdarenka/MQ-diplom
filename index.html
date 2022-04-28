@@ -17,7 +17,10 @@
           <div class="holder-logo">
             <a href="#"><img src="svg/noemi-logo.svg" alt="Логотип"></a>
           </div>
-          <div class="holder-nav">
+          <nav class="holder-nav">
+            <button class="menu-burger__header burger">
+              <span class="burger-nav">открыть меню</span>
+            </button>
             <ul class="nav-items">
               <li class="nav-item"><a href="#">Главная </a></li>
               <li class="nav-item"><a href="#">посты</a></li>
@@ -26,7 +29,7 @@
               <li class="nav-item"><a href="#">темы</a></li>
               <li class="nav-item"><a href="#">контакты</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
         <h1 class="headline">Блог о творчестве, спорте, и образе жизни</h1>
       </div>
@@ -37,7 +40,7 @@
   <!--тренды-->
   <section class="trends">
     <article class="trend">
-      <div class="pic-trend1">
+      <div class="pic-trend1 frame">
         <div class="text-trend">
           <ul class="trend-links">
             <li class="trend-link"><a href="#">Lifestyle</a></li>
@@ -48,7 +51,7 @@
       </div>
     </article>
     <article class="trend">
-      <div class="pic-trend2">
+      <div class="pic-trend2 frame">
         <div class="text-trend">
           <ul class="trend-links">
             <li class="trend-link"><a href="#">Food</a></li>
@@ -58,7 +61,7 @@
       </div>
     </article>
     <article class="trend">
-      <div class="pic-trend3">
+      <div class="pic-trend3 frame">
         <div class="text-trend">
           <ul class="trend-links">
             <li class="trend-link"><a href="#">Lifestyle</a></span>
@@ -69,7 +72,7 @@
       </div>
     </article>
     <article class="trend">
-      <div class="pic-trend4">
+      <div class="pic-trend4 frame">
         <div class="text-trend">
           <ul class="trend-links">
             <li class="trend-link"><a href="#">food</a></span>
@@ -80,7 +83,7 @@
       </div>
     </article>
   </section>
-  
+
   <!--Начало main-->
   <div class="container">
     <main class="container-main">
@@ -106,7 +109,9 @@
 
       </section>
       <section class="body">
-        <img class="body-picture" src="images/last-post2.jpg" alt="йога на пляже">
+        <div class="body-picture-body">
+          <img class="body-picture" src="images/last-post2.jpg" alt="йога на пляже">
+        </div>
         <div class="body-info">
           <div class="body-links">
             <div class="body-link-a"><a href="#">health</a></div>
@@ -122,7 +127,9 @@
         </div>
       </section>
       <section class="body">
-        <img class="body-picture" src="images/last-post3.jpg" alt="девушка в очках">
+        <div class="body-picture-body">
+          <img class="body-picture" src="images/last-post3.jpg" alt="девушка в очках">
+        </div>
         <div class="body-info">
           <div class="body-links">
             <div class="body-link-a"><a href="#">music</a></div>
@@ -138,7 +145,9 @@
         </div>
       </section>
       <section class="body">
-        <img class="body-picture" src="images/last-post4.jpg" alt="обеденный стол">
+        <div class="body-picture-body">
+          <img class="body-picture" src="images/last-post4.jpg" alt="обеденный стол">
+        </div>
         <div class="body-info">
           <div class="body-links">
             <div class="body-link-a"><a href="#">LYFESTYLE</a></div>
@@ -154,7 +163,9 @@
         </div>
       </section>
       <section class="body">
-        <img class="body-picture" src="images/last-post5.jpg" alt="подушки">
+        <div class="body-picture-body">
+          <img class="body-picture" src="images/last-post5.jpg" alt="подушки">
+        </div>
         <div class="body-info">
           <div class="body-links">
             <div class="body-link-a"><a href="#">LYFESTYLE</a></div>
@@ -256,55 +267,70 @@
     </aside>
   </div>
   <h2 class="title">Наши изделия</h2>
-  <section class="cards">
-    <div class="card">
-      <img class="pic-card" src="images/shop-item-desk1.jpg" alt="подушка">
-      <img class="pic-card" src="images/shop-item-desk2.jpg" alt="зайчик">
-      <img class="pic-card" src="images/shop-item-desk3.jpg" alt="рамка">
-    </div>
-    <div class="card-card">
-      <div class="card-text-card">
-        <h4 class="card-title">Подушки на диван</h4>
-        <p class="card-text">Набор из двух подушек с модными принтами. Видео о создании<a href="#"> здесь.</a></p>
-        <div class="card-box">
-          <div class="price">
-            <div class="card-box-noprice">1000 ₽</div>
-            <div class="card-box-price">800 ₽</div>
+  <!--карточки-->
+  <div class="cards-box">
+    <section class="card-conteiner">
+      <div class="card">
+        <img class="pic-card" src="images/shop-item-desk1.jpg" alt="подушка">
+      </div>
+      <div class="card-card">
+        <div class="card-text-card">
+          <h4 class="card-title">Подушки на диван</h4>
+          <p class="card-text">Набор из двух подушек с модными принтами. Видео о создании<a href="#"> здесь.</a></p>
+          <div class="card-box">
+            <div class="price">
+              <div class="card-box-noprice">1000 ₽</div>
+              <div class="card-box-price">800 ₽</div>
+            </div>
+            <form>
+              <button class="card-box-shop" type="submit">в магазин</button>
+            </form>
           </div>
-          <form>
-            <button class="card-box-shop" type="submit">в магазин</button>
-          </form>
         </div>
       </div>
-      <div class="card-text-card">
-        <h4 class="card-title">Кукла «Зайчик»</h4>
-        <p class="card-text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#">весенняя
-            серия постов </a>в блоге и несколько подкастов.</p>
-        <div class="card-box">
-          <div class="price">
-            <div class="card-box-price">3500 ₽</div>
+    </section>
+    <section class="card-conteiner">
+      <div class="card">
+        <img class="pic-card" src="images/shop-item-desk2.jpg" alt="зайчик">
+      </div>
+      <div class="card-card">
+        <div class="card-text-card">
+          <h4 class="card-title">Кукла «Зайчик»</h4>
+          <p class="card-text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#">весенняя
+              серия постов </a>в блоге и несколько подкастов.</p>
+          <div class="card-box">
+            <div class="price">
+              <div class="card-box-price">3500 ₽</div>
+            </div>
+            <form>
+              <button class="card-box-shop" type="submit">в магазин</button>
+            </form>
           </div>
-          <form>
-            <button class="card-box-shop" type="submit">в магазин</button>
-          </form>
         </div>
       </div>
-      <div class="card-text-card">
-        <h4 class="card-title">Шестиугольная рамка</h4>
-        <p class="card-text">Необычная рамка для украшения дома из видео <a href="#">«Как сделать рамку из подручных
-            средств за 30 минут»</a></p>
-        <div class="card-box">
-          <div class="price">
-            <div class="card-box-noprice">500 ₽</div>
-            <div class="card-box-price">400 ₽</div>
+    </section>
+    <section class="card-conteiner">
+      <div class="card">
+        <img class="pic-card" src="images/shop-item-desk3.jpg" alt="рамка">
+      </div>
+      <div class="card-card">
+        <div class="card-text-card">
+          <h4 class="card-title">Шестиугольная рамка</h4>
+          <p class="card-text">Необычная рамка для украшения дома из видео <a href="#">«Как сделать рамку из подручных
+              средств за 30 минут»</a></p>
+          <div class="card-box">
+            <div class="price">
+              <div class="card-box-noprice">500 ₽</div>
+              <div class="card-box-price">400 ₽</div>
+            </div>
+            <form>
+              <button class="card-box-shop" type="submit">в магазин</button>
+            </form>
           </div>
-          <form>
-            <button class="card-box-shop" type="submit">в магазин</button>
-          </form>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
   <!--здесь начинается подвал-->
   <footer>
     <div class="footer">
@@ -326,9 +352,9 @@
     </div>
   </footer>
   <!--popap-->
-  <div class="b-popup">
+
+  <article class="b-popup_hidden">
     <div class="b-popup-content">
-      <button class="close-button"></button>
       <h2 class="title">Ваш фидбек</h2>
       <form>
         <div class="form-group">
@@ -346,21 +372,20 @@
         <div class="form-group">
           <label class="radio-group">
             <input type="radio" class="radio" name="radio-group">
-            <span class="radio-group-text">да</span>
+            <span class="radio-group-text">Да</span>
           </label><label class="radio-group">
             <input type="radio" class="radio" name="radio-group">
-            <span class="radio-group-text">нет</span>
+            <span class="radio-group-text">Нет</span>
         </div>
         <div class="checkbox-text">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</div>
         <textarea class="field-texterea" placeholder="Может, больше рецептов?" required></textarea>
-        <button class="button-texterea" type="button">отправить</button>
+        <button class="button-texterea" type="submit">отправить</button>
+        <button class="popup_close close" type="button">
+          <div class="popup_close-text">Закрыть окно</div>
+        </button>
       </form>
     </div>
-  </div>
-
-
-
-
+  </article>
 
 
 </body>
