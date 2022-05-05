@@ -21,22 +21,18 @@ body {
   font-family: "Open Sans";
   max-width: 100vw;
 }
-.page {
-  max-width: 1200px;
-}
-@media (min-width: 641px) and (max-width: 1199px) {
-  .page {
-    max-width: 770px;
-  }
-}
+
+
 
 /*шапка*/
 .header {
   width: 100%;
 }
+
 .pic-header {
   background-color: #000;
   background-image: url("../images/banner-bg.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -73,10 +69,12 @@ body {
   display: flex;
   list-style: none;
 }
+
 .nav-items {
   display: flex;
   list-style-type: none;
 }
+
 .nav-item {
   padding-right: 27px;
 }
@@ -208,13 +206,12 @@ body {
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
-  .page {
-    max-width: 770px;
-  }
+
   .logo-nav {
     max-width: 697px;
     padding-top: 50px;
   }
+
   .nav-items {
     display: none;
   }
@@ -222,12 +219,36 @@ body {
   .pic-header {
     background-image: url("../images/banner-bg-tablet.jpg");
   }
+
   .title-header {
     font-size: 40px;
     line-height: 1.25;
     font-weight: 700;
-    max-width: 600px;
+    max-width: 80%;
   }
+}
+
+@media (max-width: 640px) {
+  .nav-items {
+    display: none;
+  }
+
+  .logo {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 235px;
+  }
+
+  .pic-header {
+    background-image: url("../images/banner-mobile.jpg");
+  }
+
+  .title-header {
+
+    width: 75%;
+ }
+
 }
 
 /*тренды*/
@@ -353,12 +374,25 @@ body {
   padding-left: 20px;
   position: relative;
 }
+
 @media (min-width: 641px) and (max-width: 1199px) {
   .trend {
     width: 49.6%;
     margin-bottom: 0.6%;
   }
 }
+
+@media (max-width: 640px) {
+  .trend {
+    width: 100%;
+    margin-bottom: 0.6%
+  }
+
+  .trend-title {
+    font-size: 16px;
+  }
+}
+
 /*здесь main*/
 .container {
   display: flex;
@@ -452,24 +486,94 @@ body {
   font-size: 15px;
   line-height: 1.5;
 }
+
 @media (min-width: 641px) and (max-width: 1199px) {
   .container {
     justify-content: center;
     width: 100%;
   }
+
   .body {
     flex-direction: column;
   }
+
   .container-main {
-    margin-right: 36px;
-    
+    margin-right: 5.5%;
+    width: 55.7%;
+
   }
-  
+
+  .body-picture {
+    width: 100%;
+  }
+
+  .body-info {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 38.8%;
+  }
+
+  .body::after {
+    content: "";
+    background-color: #eeeeee;
+    width: 100%;
+    height: 3px;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .body::after:last-child { /*почему то не работает*/
+    display: none;
+  }
 }
+
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+
+  }
+
+  .body {
+    flex-direction: column;
+    width: 100%;
+  }
+  .body::after {
+    content: "";
+    background-color: #eeeeee;
+    width: 100%;
+    height: 3px;
+    display: block;
+    margin-top: 20px;
+  }
+
+
+  .body-picture {
+    width: 100%;
+  }
+
+  .body-info {
+    width: 100%;
+  }
+
+  .container-main {
+    margin-right: 0;
+
+  }
+  .container-main {
+    margin-bottom: 44px;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .search { /*непонятно почему она не на всю ширину*/
+    width: 100%;
+  }
+}
+
 /*acaide*/
-.sidebar {
-  width: 272px;
-}
 
 .sidebar-title {
   color: #0f0d0e;
@@ -693,6 +797,7 @@ body {
   width: 300px;
   margin-right: 112px;
 }
+
 .card-container:last-child {
   margin-right: 0;
 }
@@ -713,17 +818,20 @@ body {
   text-transform: uppercase;
   margin-top: 25px;
 }
+
 .card-text {
   font-family: inherit;
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 25px;
 }
+
 .card-text a {
   text-decoration: none;
   list-style-type: none;
   color: #b59f5b;
 }
+
 .card-box {
   display: flex;
   justify-content: space-between;
@@ -734,6 +842,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .card-box-noprice {
   font-family: inherit;
   font-weight: 700;
@@ -741,12 +850,14 @@ body {
   text-decoration: line-through;
   text-transform: uppercase;
 }
+
 .card-box-price {
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
 }
+
 .card-box-shop {
   width: 140px;
   background-color: #b59f5b;
@@ -758,19 +869,31 @@ body {
   font-weight: 700;
   color: #ffffff;
 }
-@media (min-width: 641px) and (max-width: 1199px) {
+
+@media (min-width: 641px) and (max-width: 1199px)  {
   .cards-box {
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
   }
+
   .card-container {
-   width: 40%;
-   margin-right: 0;
-   margin-left: 60px;
-   margin-bottom: 50px;
+    width: 40%;
+    margin-right: 0;
+    margin-left: 60px;
+    margin-bottom: 50px;
   }
-  
+
+}
+@media (max-width: 640px) {
+  .card-container {
+    
+    margin-bottom: 56px;
+    width: 100%;
+  }
+  .cards-box {
+    width: 100%;
+  }
 }
 /*подвал*/
 .footer {
@@ -788,10 +911,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .socials {
   display: flex;
   list-style-type: none;
 }
+
 .social-link {
   display: block;
   width: 25px;
@@ -839,15 +964,23 @@ body {
   margin-top: 74px;
   margin-bottom: 41px;
 }
+
 .footer-copyright a {
   text-decoration: none;
   color: #999999;
 }
+
 @media (min-width: 641px) and (max-width: 1199px) {
   .footer-socials {
     width: 100%;
   }
 }
+@media (max-width: 640px)  {
+  .footer-socials {
+    width: 100%;
+  }
+}
+
 /*popap*/
 
 .b-popup_hidden {
@@ -858,6 +991,9 @@ body {
   position: fixed;
   top: 0px;
   z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
 }
 
@@ -867,12 +1003,12 @@ body {
   position: fixed;
   padding: 10px;
   background-color: #fff;
-  left: 40%;
-  top: 10%;
+  
 }
 
 .b-popup-content {
   min-height: 600px;
+  justify-content: center;
 }
 
 .form-group {
@@ -947,7 +1083,7 @@ body {
   margin-left: 15px;
 }
 
-.radio:checked ~ .radio-group-text::before {
+.radio:checked~.radio-group-text::before {
   background-image: url("../svg/form-empty-circle.svg");
 }
 
@@ -992,6 +1128,7 @@ body {
   font-size: 16px;
   position: relative;
 }
+
 .close {
   background-image: url("../svg/form-x.svg");
   background-size: cover;
@@ -1001,6 +1138,7 @@ body {
   top: -705px;
   right: -365px;
 }
+
 .popup_close-text {
   width: 1px;
   height: 1px;
