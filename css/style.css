@@ -19,13 +19,21 @@
 
 body {
   font-family: "Open Sans";
-  width: 100%;
+  max-width: 100vw;
+}
+.page {
+  max-width: 1200px;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .page {
+    max-width: 770px;
+  }
 }
 
 /*шапка*/
- .header {
-   width: 100%;
- }
+.header {
+  width: 100%;
+}
 .pic-header {
   background-color: #000;
   background-image: url("../images/banner-bg.jpg");
@@ -53,6 +61,7 @@ body {
   margin-right: auto;
   position: relative;
   z-index: 5;
+  max-width: 1170px;
 }
 
 .logo {
@@ -64,7 +73,10 @@ body {
   display: flex;
   list-style: none;
 }
-
+.nav-items {
+  display: flex;
+  list-style-type: none;
+}
 .nav-item {
   padding-right: 27px;
 }
@@ -189,10 +201,6 @@ body {
   background-color: #e1d9bd;
 }
 
-li {
-  display: inline-block;
-}
-
 @media (min-width: 1201px) {
   .menu-burger__header {
     display: none;
@@ -200,9 +208,12 @@ li {
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
+  .page {
+    max-width: 770px;
+  }
   .logo-nav {
-    padding-left: 25px;
-    padding-right: 25px;
+    max-width: 697px;
+    padding-top: 50px;
   }
   .nav-items {
     display: none;
@@ -215,11 +226,9 @@ li {
     font-size: 40px;
     line-height: 1.25;
     font-weight: 700;
-    width: 78%;
+    max-width: 600px;
+  }
 }
-}
-
-
 
 /*тренды*/
 .trends {
@@ -344,19 +353,12 @@ li {
   padding-left: 20px;
   position: relative;
 }
-
 @media (min-width: 641px) and (max-width: 1200px) {
   .trend {
     width: 49.6%;
-    
-  }
-
-  .trend:nth-child(n + 3) {
-    margin-top: 0.5%;
+    margin-bottom: 0.6%;
   }
 }
-
-
 /*здесь main*/
 .container {
   display: flex;
@@ -382,17 +384,16 @@ li {
   margin-bottom: 0px;
 }
 
-.body-picture-body {
-  width: 100%;
-}
-
 .body-picture {
+  width: 382px;
   margin-right: 31px;
 }
 
 .body-links {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+  padding-inline-start: 0;
 }
 
 .body-link-a a {
@@ -451,45 +452,23 @@ li {
   font-size: 15px;
   line-height: 1.5;
 }
-
 @media (min-width: 641px) and (max-width: 1200px) {
   .container {
+    justify-content: center;
     width: 100%;
-   
-  }
-  .container-main {
-    margin-right: 37px;
   }
   .body {
     flex-direction: column;
-    width: 393px;
+  }
+  .container-main {
+    margin-right: 36px;
     
   }
-  .body::after {
-    content: "";
-  display: block;
-  margin: 0 auto;
-  width: 393px;
-  height: 3px;
-  background-color: #eeeeee;
-  margin-top: 20px;
-  margin-bottom: 28px;
-
+  
 }
-.body:last-child::after {
-  display: none;
-}
-  .sidebar {
-    width: 45%;
-  }
-
-}
-
-
 /*acaide*/
 .sidebar {
   width: 272px;
-  margin-right: 245;
 }
 
 .sidebar-title {
@@ -641,7 +620,10 @@ li {
 .link {
   margin-bottom: 60px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
 .link-active a {
@@ -665,6 +647,9 @@ li {
 
 .preview {
   display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
 .preview-text a {
@@ -675,9 +660,10 @@ li {
   font-weight: 700;
 }
 
-sup {
+.sup {
   color: #b59f5b;
   margin-left: 6px;
+  font-size: 12px;
 }
 
 .preview-text:after {
@@ -698,13 +684,17 @@ sup {
 .cards-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
 }
 
 .card-container {
   justify-content: flex-start;
   width: 300px;
+  margin-right: 112px;
+}
+.card-container:last-child {
+  margin-right: 0;
 }
 
 .card-text-card {
@@ -769,16 +759,19 @@ sup {
   color: #ffffff;
 }
 @media (min-width: 641px) and (max-width: 1200px) {
-  .card-box {
+  .cards-box {
     flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
   }
   .card-container {
-    width: 50%;
-    justify-content: flex-start;
-    margin-top: 20px;
+   width: 40%;
+   margin-right: 0;
+   margin-left: 60px;
+   margin-bottom: 50px;
   }
+  
 }
-
 /*подвал*/
 .footer {
   margin-top: 65px;
@@ -795,7 +788,10 @@ sup {
   margin-left: auto;
   margin-right: auto;
 }
-
+.socials {
+  display: flex;
+  list-style-type: none;
+}
 .social-link {
   display: block;
   width: 25px;
@@ -839,11 +835,19 @@ sup {
   font-size: 12px;
   font-weight: 700;
   text-transform: capitalize;
-  color: #999999;
+
   margin-top: 74px;
   margin-bottom: 41px;
 }
-
+.footer-copyright a {
+  text-decoration: none;
+  color: #999999;
+}
+@media (min-width: 641px) and (max-width: 1200px) {
+  .footer-socials {
+    width: 100%;
+  }
+}
 /*popap*/
 
 .b-popup_hidden {
@@ -854,7 +858,7 @@ sup {
   position: fixed;
   top: 0px;
   z-index: 11;
-  display: none;
+  visibility: hidden;
 }
 
 .b-popup_hidden .b-popup-content {
