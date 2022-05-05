@@ -24,7 +24,7 @@ body {
 .page {
   max-width: 1200px;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .page {
     max-width: 770px;
   }
@@ -201,13 +201,13 @@ body {
   background-color: #e1d9bd;
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1200px) {
   .menu-burger__header {
     display: none;
   }
 }
 
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .page {
     max-width: 770px;
   }
@@ -353,7 +353,7 @@ body {
   padding-left: 20px;
   position: relative;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .trend {
     width: 49.6%;
     margin-bottom: 0.6%;
@@ -452,7 +452,7 @@ body {
   font-size: 15px;
   line-height: 1.5;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .container {
     justify-content: center;
     width: 100%;
@@ -758,7 +758,7 @@ body {
   font-weight: 700;
   color: #ffffff;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .cards-box {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -843,7 +843,7 @@ body {
   text-decoration: none;
   color: #999999;
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   .footer-socials {
     width: 100%;
   }
