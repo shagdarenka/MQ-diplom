@@ -524,8 +524,8 @@ body {
     margin-top: 20px;
   }
 
-  .body::after:last-child { /*почему то не работает*/
-    display: none;
+  .body:last-child::after{
+    visibility: hidden;
   }
 }
 
