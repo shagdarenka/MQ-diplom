@@ -823,11 +823,8 @@ body {
 }
 
 .card-container {
-
-
   display: flex;
   flex-direction: column;
-
 }
 
 
@@ -835,7 +832,7 @@ body {
 .card-text-card {
   width: 300px;
   outline: 3px solid #b59f5b;
-  outline-offset: 24px;
+  outline-offset: 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
